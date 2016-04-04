@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CommunityVote
 // @namespace    http://simpcraft.com/
-// @version      0.6
+// @version      0.7
 // @description  allows robin users to choose what i vote
 // @author       /u/haykam821
 // @match        https://www.reddit.com/robin*
@@ -15,7 +15,7 @@
  
  function introductionMessage(){
      sendMessage('/vote grow'); // I don't want to be kicked out!
-     sendMessage('[CommunityVote] I vote what you choose. Type \"\!cv \(vote\)\" to choose what I will vote for.');
+     sendMessage('[CommunityVote] I vote what you choose. Type \"\!cv \(vote\)\" to choose what I will vote for, and \"!cv commands\" for more.');
 }
 
  window.onload = introductionMessage; // Make sure it sends the introduction message!
@@ -37,13 +37,16 @@
             sendMessage('[CommunityVote] I refuse to vote ABANDON.');
 		}
         if(msg.includes('!cv help')) {
-            sendMessage('[CommunityVote] I vote what you choose. Type \"\!cv \(stay or grow\)\" to choose what I will vote for.');
+            sendMessage('[CommunityVote] I vote what you choose. Type \"\!cv \(stay or grow\)\" to choose what I will vote for, and \"!cv commands\" for more.');
 		}
         if(msg.includes('!cv commands')) {
-            sendMessage('[CommunityVote] !cv \[grow, stay, help, commands, creator\]');
+            sendMessage('[CommunityVote] !cv \[grow, stay, abandon, help, commands, creator, version\]');
 		}
         if(msg.includes('!cv creator')) {
             sendMessage('[CommunityVote] I was created by /u/haykam821.');
+		}
+        if(msg.includes('!cv version')) {
+            sendMessage('[CommunityVote] This bot is running version 0.7.');
 		}
     });
  });
