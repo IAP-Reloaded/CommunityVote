@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CommunityVote
 // @namespace    http://simpcraft.com/
-// @version      0.2
+// @version      0.3
 // @description  allows robin users to choose what i vote
 // @author       /u/haykam821
 // @match        https://www.reddit.com/robin*
@@ -13,7 +13,7 @@
      $("#robinSendMessage > input[type='submit']").click();
  }
 
-sendMessage('Type \"\!cv \(vote\)\" to choose what I will vote for.');
+ sendMessage('Type \"\!cv \(vote\)\" to choose what I will vote for.');
 
  setTimeout(function(){
  var target = document.querySelector('#robinChatMessageList');
