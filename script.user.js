@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CommunityVote
 // @namespace    http://simpcraft.com/
-// @version      0.7
+// @version      0.8
 // @description  allows robin users to choose what i vote
 // @author       /u/haykam821
 // @match        https://www.reddit.com/robin*
@@ -15,7 +15,7 @@
  
  function introductionMessage(){
      sendMessage('/vote grow'); // I don't want to be kicked out!
-     sendMessage('[CommunityVote] I vote what you choose. Type \"\!cv \(vote\)\" to choose what I will vote for, and \"!cv commands\" for more.');
+     sendMessage('[CommunityVote] I vote what you choose. Type \"\!cv \(vote option\)\" to choose what I will vote for, and \"!cv commands\" for more.');
 }
 
  window.onload = introductionMessage; // Make sure it sends the introduction message!
@@ -46,7 +46,7 @@
             sendMessage('[CommunityVote] I was created by /u/haykam821.');
 		}
         if(msg.includes('!cv version')) {
-            sendMessage('[CommunityVote] This bot is running version 0.7.');
+            sendMessage('[CommunityVote] This bot is running version 0.8.');
 		}
     });
  });
