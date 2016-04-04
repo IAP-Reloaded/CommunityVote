@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CommunityVote
 // @namespace    http://simpcraft.com/
-// @version      0.5
+// @version      0.6
 // @description  allows robin users to choose what i vote
 // @author       /u/haykam821
 // @match        https://www.reddit.com/robin*
@@ -15,7 +15,7 @@
  
  function introductionMessage(){
      sendMessage('/vote grow'); // I don't want to be kicked out!
-     sendMessage('[CommunityVote] Type \"\!cv \(vote\)\" to choose what I will vote for.');
+     sendMessage('[CommunityVote] I vote what you choose. Type \"\!cv \(vote\)\" to choose what I will vote for.');
 }
 
  window.onload = introductionMessage; // Make sure it sends the introduction message!
@@ -37,7 +37,10 @@
             sendMessage('[CommunityVote] I refuse to vote ABANDON.');
 		}
         if(msg.includes('!cv help')) {
-            sendMessage('[CommunityVote] Type \"\!cv \(vote\)\" to choose what I will vote for.');
+            sendMessage('[CommunityVote] I vote what you choose. Type \"\!cv \(stay or grow\)\" to choose what I will vote for.');
+		}
+        if(msg.includes('!cv commands')) {
+            sendMessage('[CommunityVote] !cv \[grow, stay, help, commands, creator\]');
 		}
         if(msg.includes('!cv creator')) {
             sendMessage('[CommunityVote] I was created by /u/haykam821.');
