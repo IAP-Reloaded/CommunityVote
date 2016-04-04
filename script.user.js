@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CommunityVote
 // @namespace    http://simpcraft.com/
-// @version      0.9
+// @version      0.10
 // @description  allows robin users to choose what i vote
 // @author       /u/haykam821
 // @match        https://www.reddit.com/robin*
@@ -45,8 +45,11 @@
         if(msg.includes('!cv creator')) {
             sendMessage('[CommunityVote] I was created by /u/haykam821.');
 		}
+        if(msg.includes('!cv author')) {
+            sendMessage('[CommunityVote] I was created by /u/haykam821.');
+		}
         if(msg.includes('!cv version')) {
-            sendMessage('[CommunityVote] This bot is running version 0.9.');
+            sendMessage('[CommunityVote] This bot is running version 0.10.');
 		}
     });
  });
